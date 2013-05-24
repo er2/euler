@@ -1,0 +1,13 @@
+#!/bin/perl
+$bigun = 600851475143;
+$lpf=$bigun;
+#my @sieve = ((0) x $bigun);
+for($i=1;$i<$bigun && $i<$lpf;$i++){
+    if($lpf%$i==0){
+	$lpf=$lpf/$i;
+    }
+}
+print "$lpf\n";
+
+    
+    

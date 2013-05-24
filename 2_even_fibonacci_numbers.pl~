@@ -1,0 +1,12 @@
+#!/bin/perl
+$i=1;
+$j=1;
+$sum=0;
+while($i<4000000){
+    $k=$i+$j;
+    if($k%2==0){$sum+=$k;}
+    $i=$j;
+    $j=$k;
+    #print "$k\n";
+}
+print "Sum is $sum\n";

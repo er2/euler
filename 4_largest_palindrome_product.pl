@@ -1,0 +1,31 @@
+#!/bin/perl
+$i=$j=999;
+$lpp=0;
+for($i=999;$i>99;$i--){
+    for($j=999;$j>99;$j--){
+	$product=$i*$j;
+#	print "Product equals $product\n";
+	$hunthou=($product/100000)%10;
+#	print "Hunthou equals $hunthou\n";
+	$tenthou=($product/10000)%10;
+#	print "tenthou equals $tenthou\n";
+	$thou=($product/1000)%10;
+#	print "thou equals $thou\n";
+	$hun=($product/100)%10;
+#	print "hun equals $hun\n";
+	$ten=($product/10)%10;
+#	print "ten equals $ten\n";
+	$one=$product%10;
+#	print "one equals $one\n\n";
+	if($hunthou>0){
+	    if($hunthou==$one && $tenthou==$ten && $thou==$hun){
+		if($product>$lpp){
+		    $lpp=$product;
+		    print "preliminary lpp: $lpp\n";
+		}
+	    }
+	}
+    }
+}
+
+print "ultimate $lpp\n";
